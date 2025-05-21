@@ -30,7 +30,7 @@ GENERO_CHOICES = [
 
 class Medico(models.Model):
     nome = models.CharField(max_length=100, verbose_name='Nome', help_text='Nome Completo')
-    crm = models.CharField(max_length=100, unique=True, verbose_name='CRM', help_text='Digite a CRM')
+    crm = models.CharField(max_length=9, unique=True, verbose_name='CRM', help_text='Digite a CRM')
     telefone = models.CharField(max_length=11, unique=True, verbose_name='Telefone', help_text='Digite o telefone')
     email = models.EmailField(max_length=100, unique=True, verbose_name='Email', help_text='Digite o email')
     data_nascimento = models.DateField(verbose_name='Data de Nascimento', help_text='Data de Nascimento')
